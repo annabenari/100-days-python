@@ -106,3 +106,91 @@ else:
 if extra_cheese == "Y":
     bill += 1
 print(f"Your total is £{bill}")
+
+
+# #Logical operators
+# A and B #Both conditions need to be true
+# C or D #Only one condition needs to be true
+# not E #The condition must be false
+
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
+
+if height >= 120:
+    print("You can ride the rollercoaster!")
+    age = int(input("What is your age? "))
+    if age < 12:
+        bill = 5
+        print("Child tickets are $5.")
+    elif age <= 18:
+        bill = 7
+        print("Youth tickets are $7.")
+    elif age >= 45 and age <= 55:  # this can be written like 45 <= age <= 55
+        bill = 0
+        print("Midlife crisis tickets are free")
+    else:
+        bill = 12
+        print("Adult tickets are $12.")
+
+    wants_photo = input("Do you want a photo taken? Y or N. ")
+    if wants_photo == "Y":
+        bill += 3
+
+    print(f"Your final bill is ${bill}")
+
+else:
+    print("Sorry, you have to grow taller before you can ride.")
+
+
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\ ` . "-._ /_______________|_______
+|                   | |o ;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+first_turn = input("Would you like to go left or right?: ")
+
+if first_turn == "left":
+    print("Well done you are onto the next stage")
+    second_turn = input("Would you like to swim or wait?: ")
+    if second_turn == "wait":
+        print("Well done you are onto the next stage")
+        third_turn = input(
+            "Do you want to go through the red, blue or yellow door?: ")
+        if third_turn == "yellow":
+            print("You win!!!")
+        elif third_turn == "blue":
+            print("Eaten by beasts. Game Over")
+        elif third_turn == "red":
+            print("Burned by fire.Game Over.")
+        else:
+            print("Game Over.")
+    elif second_turn == "swim":
+        print("Attacked by trout.Game Over")
+    else:
+        print("You can only wait or swim")
+elif first_turn == "right":
+    print("You've fallen into a hole. Game Over.")
+else:
+    print("You can only turn left or right")
