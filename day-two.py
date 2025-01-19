@@ -97,4 +97,4 @@ people = int(input("How many people to split the bill? "))
 perPerson = (bill / people) * ((tip/100) + 1)
 
 perPerson = round(perPerson, 2)  # Round to 2 decimal places
-print(f"Each person should pay: ${perPerson}"
+print(f"Each person should pay: ${perPerson}")
